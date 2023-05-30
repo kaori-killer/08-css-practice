@@ -1,18 +1,19 @@
-import styled from 'styled-components';
-import { useBoolean } from 'usehooks-ts';
+import styled, {css} from 'styled-components';
+import {useBoolean} from 'usehooks-ts';
 
 type ButtonProps = {
 	active: boolean;
 };
 
-function background(props: ButtonProps) {
-	return props.active ? '#00F' : '#FFF';
-}
-
 const Button = styled.button<ButtonProps>`
-    background: ${background};
-    color: #000;
+    background: ${props => (props.active ? '#00F' : '#FFF')};
+    color:  ${props => (props.active ? '#FFF' : '#000')};
     border: 1px solid #888;
+
+    ${props => props.active && css`
+        background: #F00;
+        color: #FFF
+    `}
 `;
 
 export default function Switch() {
