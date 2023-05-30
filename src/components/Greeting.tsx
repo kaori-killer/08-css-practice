@@ -1,17 +1,29 @@
-const darkMode = false;
+import styled from 'styled-components';
 
-function primaryColor() {
-	return darkMode ? '#F00' : '#00F';
-}
+const Paragraph = styled.p`
+  color: #00F;
+
+  strong {
+    font-size: 2em;
+    color: #F00;
+  }
+`;
+
+const BigParagraph = styled.p`
+  color: #00F;
+  font-size: 2em;
+
+  strong {
+    font-size: 2em;
+    color: #F00;
+  }
+`;
 
 export default function Greeting() {
 	return (
-		<p
-			style={{
-				color: primaryColor(),
-			}}
-		>
-            Hello, world!
-		</p>
+		<BigParagraph>
+            Hello, World
+			<strong>!</strong>
+		</BigParagraph>
 	);
 }
