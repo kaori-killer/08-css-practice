@@ -6,12 +6,12 @@ type ButtonProps = {
 };
 
 const Button = styled.button<ButtonProps>`
-    background: ${props => (props.active ? '#00F' : '#FFF')};
-    color:  ${props => (props.active ? '#FFF' : '#000')};
-    border: 1px solid #888;
+    background: #FFF;
+    color: #000;
+    border: 1px solid ${props => (props.active ? '#F00' : '#888')};
 
     ${props => props.active && css`
-        background: #F00;
+        background: #00F;
         color: #FFF
     `}
 `;
