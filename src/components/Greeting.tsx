@@ -9,14 +9,8 @@ const Paragraph = styled.p`
   }
 `;
 
-const BigParagraph = styled.p`
-  color: #00F;
+const BigParagraph = styled(Paragraph)`
   font-size: 2em;
-
-  strong {
-    font-size: 2em;
-    color: #F00;
-  }
 `;
 
 export default function Greeting() {
